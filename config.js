@@ -2,7 +2,7 @@ module.exports = {
   port: process.env.NODE_ENV === 'production' ? process.env.PORT : 8080,
   db: {
     prod: process.env.DATABASE_URL || 'mongodb://localhost/reddit',
-    test: 'mongodb://localhost/reddit_test',
+    test: `${process.env.DATABASE_URL}/reddit_test`,
     options: {
       useNewUrlParser: true,
       useCreateIndex: true,
