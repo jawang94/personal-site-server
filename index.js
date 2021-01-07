@@ -10,6 +10,7 @@ if (require.main === module) {
   app.listen(config.port);
   connect(config.db.prod);
   mongoose.connection.on('error', console.log);
+  mongoose.connection.on('connected', () => console.log('Successfully connected'));
 }
 
 module.exports = { connect };
