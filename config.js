@@ -7,7 +7,8 @@ module.exports = {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
-      useUnifiedTopology: true,
+      reconnectTries: Number.MAX_VALUE,
+      reconnectInterval: 500
     }
   },
   jwt: {
